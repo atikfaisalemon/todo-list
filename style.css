@@ -8,7 +8,7 @@
   }
 
   button {
-    @apply hover:bg-red-500 text-white px-2 py-0.5 font-medium text-sm bg-red-300 rounded-md;
+    @apply bg-red-500 text-white px-2 py-0.5 font-medium text-sm hover:bg-red-300 rounded-md;
   }
 
   li {
