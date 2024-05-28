@@ -108,6 +108,7 @@ inputForm.addEventListener("submit", (e) => {
   // Render the task list
   renderTaskList(taskList);
   window.localStorage.setItem("taskList", JSON.stringify(taskList));
+  inputForm.reset();
 });
 
 // UI render framerowk
@@ -127,6 +128,7 @@ const renderTaskList = (taskList) => {
   listItems?.length &&
     listContainer.insertAdjacentHTML("beforeend", listItems?.join(""));
 
+  // Set event listeners for delete buttons
   const deleteButtons = document.querySelectorAll(".delete");
   deleteButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
@@ -136,7 +138,7 @@ const renderTaskList = (taskList) => {
       window.localStorage.setItem("taskList", JSON.stringify(taskList));
     });
   });
-
+  // Set event listeners for checkboxes
   const checkboxes = document.querySelectorAll("input[type='checkbox']");
   checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener("change", (e) => {
@@ -145,7 +147,7 @@ const renderTaskList = (taskList) => {
       window.localStorage.setItem("taskList", JSON.stringify(taskList));
     });
   });
-
+  // Set styles for tasks
   const spans = document.querySelectorAll("span");
   spans.forEach((span, index) => {
     if (taskList.tasks[index].isCheck) {
