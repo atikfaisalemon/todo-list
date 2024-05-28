@@ -13,17 +13,18 @@
       <div class="">
         <h1 class="text-lg">Todo List</h1>
       </div>
-      <div class="relative w-full">
+      <form id="inputForm" class="relative w-full">
         <!-- input filed -->
         <input
           class="focus:outline-none bg-[#cdc2fe] rounded-full py-2 pl-5 pr-[120px] w-full"
           type="text"
           id="input"
           placeholder="Add a new task"
+          name="task"
         />
         <!-- button -->
-        <button class="add-btn" id="btn">Add</button>
-      </div>
+        <button type="submit" class="add-btn" id="btn">Add</button>
+      </form>
       <!-- Task section -->
       <ul id="list" class="w-full max-h-[300px] overflow-auto">
         <!-- list items -->

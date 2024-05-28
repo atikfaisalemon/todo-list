@@ -28,4 +28,8 @@
   .task-item label {
     @apply ms-2 text-sm font-medium text-gray-900;
   }
+
+  .checked {
+    @apply line-through text-gray-500;
+  }
 }
